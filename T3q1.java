@@ -16,7 +16,8 @@ Step to find all the patterns of 0(1+)0 in the given string
 •	Print count.
 
 */
-import java.util.*;
+
+/*import java.util.*;
 class Test
 {
     String str;
@@ -48,5 +49,26 @@ class Test
         Scanner sc=new Scanner(System.in);
         obj.str=sc.nextLine();
         obj.count();
+    }
+}
+*/
+
+import java.util.*;
+class Pattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the string : ");
+        String str=sc.nextLine();
+        int c=0;
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)=='0' && i>0 && str.charAt(i-1)=='1')
+            {
+                c++;
+            }
+        }
+        System.out.println("Total no. of patterns in the string are : "+c);
     }
 }
